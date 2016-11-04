@@ -1,0 +1,8 @@
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\bin\Debug\Sahara.exe.config
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\bin\Debug\Sahara.exe
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\bin\Debug\Sahara.pdb
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\bin\Debug\HabboEncryption.dll
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\bin\Debug\MySql.Data.dll
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\obj\Debug\Sahara.exe
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\obj\Debug\Sahara.pdb
+C:\Users\Davinia\Desktop\worldrp\Sahara\Sahara\obj\Debug\Sahara.csprojResolveAssemblyReference.cache

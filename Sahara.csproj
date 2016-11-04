@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A732296-35B6-43C6-9498-85542D895E2A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sahara</RootNamespace>
+    <AssemblyName>Sahara</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Sahara-Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HabboEncryption">
+      <HintPath>bin\Debug\Extra\References\HabboEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Extra\References\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Game\Achievements\Achievement.cs" />
+    <Compile Include="Base\Game\Achievements\AchievementLoader.cs" />
+    <Compile Include="Base\Game\Achievements\AchievementManager.cs" />
+    <Compile Include="Base\Game\Moderation\ModerationBan.cs" />
+    <Compile Include="Base\Game\Moderation\ModerationBanType.cs" />
+    <Compile Include="Base\Game\Moderation\ModerationManager.cs" />
+    <Compile Include="Base\Game\Moderation\ModerationPresetActionMessage.cs" />
+    <Compile Include="Base\Game\Moderation\ModerationTicket.cs" />
+    <Compile Include="Base\Game\Moderation\ModerationTool.cs" />
+    <Compile Include="Base\Game\Permissions\Permission.cs" />
+    <Compile Include="Base\Game\Permissions\PermissionCommand.cs" />
+    <Compile Include="Base\Game\Permissions\PermissionGroup.cs" />
+    <Compile Include="Base\Game\Permissions\PermissionManager.cs" />
+    <Compile Include="Base\Game\Players\Achievements\PlayerAchievement.cs" />
+    <Compile Include="Base\Game\Achievements\AchievementLevel.cs" />
+    <Compile Include="Base\Game\Badges\BadgeDefinition.cs" />
+    <Compile Include="Base\Game\Badges\BadgeManager.cs" />
+    <Compile Include="Base\Game\Items\GameItem.cs" />
+    <Compile Include="Base\Game\Items\GameItemInformation.cs" />
+    <Compile Include="Base\Game\Items\GameItemLoader.cs" />
+    <Compile Include="Base\Game\GameManager.cs" />
+    <Compile Include="Base\Game\Players\Badges\Badge.cs" />
+    <Compile Include="Base\Game\Players\Clothing\ClothingManagement.cs" />
+    <Compile Include="Base\Game\Players\Clothing\ClothingParts.cs" />
+    <Compile Include="Base\Game\Players\Effects\Effect.cs" />
+    <Compile Include="Base\Game\Players\Effects\EffectManagement.cs" />
+    <Compile Include="Base\Game\Players\Inventory\Bots\BotGender.cs" />
+    <Compile Include="Base\Game\Players\Inventory\Bots\Bot.cs" />
+    <Compile Include="Base\Game\Players\Inventory\InventoryManagement.cs" />
+    <Compile Include="Base\Game\Players\Messenger\PlayerMessenger.cs" />
+    <Compile Include="Base\Game\Players\Messenger\MessengerBarState.cs" />
+    <Compile Include="Base\Game\Players\Messenger\MessengerBuddy.cs" />
+    <Compile Include="Base\Game\Players\Messenger\MessengerBuddyRequest.cs" />
+    <Compile Include="Base\Game\Players\Messenger\MessengerState.cs" />
+    <Compile Include="Base\Game\Players\Permissions\PermissionManagement.cs" />
+    <Compile Include="Base\Game\Players\Player.cs" />
+    <Compile Include="Base\Game\Players\Badges\BadgeManagement.cs" />
+    <Compile Include="Base\Game\Players\PlayerData.cs" />
+    <Compile Include="Base\Game\Players\PlayerLoader.cs" />
+    <Compile Include="Base\Game\Players\PlayerManager.cs" />
+    <Compile Include="Base\Game\Players\PlayerPacketHandler.cs" />
+    <Compile Include="Base\Game\Players\PlayerProcessor.cs" />
+    <Compile Include="Base\Game\Players\Relationships\PlayerRelationship.cs" />
+    <Compile Include="Base\Game\Players\Relationships\PlayerRelationshipType.cs" />
+    <Compile Include="Base\Game\Rooms\AI\Pets\Pet.cs" />
+    <Compile Include="Base\Game\Rooms\AI\Pets\PetInformation.cs" />
+    <Compile Include="Base\Game\Rooms\AI\Pets\PetLevel.cs" />
+    <Compile Include="Base\Game\Rooms\Room.cs" />
+    <Compile Include="Base\Game\Rooms\RoomInformation.cs" />
+    <Compile Include="Base\Game\Rooms\RoomManager.cs" />
+    <Compile Include="Base\Game\Rooms\RoomModel.cs" />
+    <Compile Include="Base\Game\Subscriptions\SubscriptionInformation.cs" />
+    <Compile Include="Base\Game\Subscriptions\SubscriptionManager.cs" />
+    <Compile Include="Base\Game\Support\SupportTicket.cs" />
+    <Compile Include="Base\Game\Support\SupportTicketStatus.cs" />
+    <Compile Include="Base\Utility\UnixTimestampGenerator.cs" />
+    <Compile Include="Base\Utility\Utility.cs" />
+    <Compile Include="Core\Config\ConfigManager.cs" />
+    <Compile Include="Core\Database\DatabaseConnection.cs" />
+    <Compile Include="Core\Database\DatabaseManager.cs" />
+    <Compile Include="Core\Database\DatabaseSettings.cs" />
+    <Compile Include="Core\Encryption\Crypto\Prng\ARC4.cs" />
+    <Compile Include="Core\Encryption\Crypto\RSA\RSAKey.cs" />
+    <Compile Include="Core\Encryption\HabboEncryptionV2.cs" />
+    <Compile Include="Core\Encryption\KeyExchange\DiffieHellman.cs" />
+    <Compile Include="Core\Encryption\Keys\RSAKeys.cs" />
+    <Compile Include="Core\Logging\LogManager.cs" />
+    <Compile Include="Core\Logging\LogType.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\IncomingHeaders.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\IncomingPacket.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Catalog\GetCatalogRoomPromotionMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Handshake\GenerateSecretKeyMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Handshake\SsoTicketMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Handshake\UniqueIdMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Handshake\Misc\ClientVariablesMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\IPacket.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\IIncomingPacket.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Handshake\InitCryptoMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\Incoming\Packets\Handshake\GetClientVersionMessageEvent.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\IOutgoingPacket.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Catalog\GetCatalogRoomPromotionComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\AchievementScoreMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\FurniListNotificationMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\BadgesMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\SoundSettingsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\BadgeDefinitionsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\CfhTopicsInitMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\BuildersClubMembershipMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\AvailabilityStatusMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\UserRightsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\FigureSetIdsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\FavouriteRoomsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\NavigatorSettingsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\AvatarEffectsMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\AuthenticationOkMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\SetUniqueIdMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\SecretKeyMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\Packets\Handshake\InitCryptoMessageComposer.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\OutgoingPacket.cs" />
+    <Compile Include="Core\Net\Messages\Outgoing\OutgoingHeaders.cs" />
+    <Compile Include="Core\Net\Messages\PacketManager.cs" />
+    <Compile Include="Core\Server\ServerInformation.cs" />
+    <Compile Include="Core\Server\ServerStatusUpdater.cs" />
+    <Compile Include="Core\Sockets\SocketManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sahara.cs" />
+    <Compile Include="SaharaServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+    <Content Include="Sahara-Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\Game\Players\Inventory\Pets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
